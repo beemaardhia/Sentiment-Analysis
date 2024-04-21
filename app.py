@@ -103,8 +103,8 @@ def predict (text):
 def preproced_eng(text):
     text = ''.join([char for char in text if char not in string.punctuation])
     blob = TextBlob(text)
-    text = str(blob.correct())
-    words = blob.words
+    correct = blob.correct()
+    words = correct.words
     lemmatized = ' '.join(word.lemmatize() for word in words)
     return lemmatized.lower()
 
