@@ -12,11 +12,12 @@ def check_and_download(collection_name):
     else:
         print(f"{collection_name} sudah terinstal.")
 
-# Memeriksa dan mengunduh koleksi data 'punkt'
 check_and_download('punkt')
-
-# Memeriksa dan mengunduh koleksi data 'stopwords'
+check_and_download('averaged_perceptron_tagger')
+check_and_download('wordnet')
 check_and_download('stopwords')
+
+
 
 import streamlit as st
 from textblob import TextBlob
